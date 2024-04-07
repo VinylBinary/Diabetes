@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <form id="myForm" method="post" action="{% url '' %}" enctype="multipart/form-data"> 
+    {% csrf_token %}
+    {{form.as_p}}   
+    <button id="submitBtn" type="submit">Submit</button>
+</form>
+{% comment %} <script src="{% static 'main.js' %}"></script> {% endcomment %}
+</body>
+</html>

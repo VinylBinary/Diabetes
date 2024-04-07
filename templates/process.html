@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{%load static%}
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Diabetes prediction </title> 
+    <link rel="stylesheet" href="{%static 'main.css' %}">
+   </head>
+<body>
+  <div class="wrapper">
+    <h2>Diabetes Type-2 Prediction</h2>
+    <form id="myForm" method="post" action="{% url '' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+      <div class="input-box">
+        <input type="text" placeholder="Enter your name" name = "Name" required>
+      </div>
+      <div class="input-box">
+        <input type="number" placeholder="Age" name="age" min="0" required="" id="id_age">
+      </div>
+      <div class="input-box">
+        <input type="text" placeholder="Gender" name="gender" maxlength="10" required="" id="id_gender">      </div>
+      <div class="input-box">
+        <label>Smoke/Non-Smoker</label>
+        <input type="checkbox" name="smoke" id="id_smoke">
+      </div>
+      <div class="input-box" style = "display: flex;">
+      <input type="file" name="audio" required="" id="id_audio">
+      </div>
+      <div class="input-box button">
+        <input type="Submit" value="Register Now">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
